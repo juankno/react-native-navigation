@@ -2,13 +2,14 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { Button } from '../components/Button';
+import { styles } from '../theme/appTheme';
 
 interface Props extends StackScreenProps<any, any> { }
 
 export const PageThreeScreen = ({ navigation }: Props) => {
   return (
-    <View>
-      <Text>Page 3 Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Page 3 Screen</Text>
 
       <Button
         title="Regresar"

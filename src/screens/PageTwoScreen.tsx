@@ -8,9 +8,10 @@ interface Props extends StackScreenProps<any, any> { }
 
 export const PageTwoScreen = ({ navigation }: Props) => {
 
+
   return (
-    <View style={styles.globalMargin}>
-      <Text>Page 2 Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Page 2 Screen</Text>
 
       <Button
         title="Ir a la página 3"
