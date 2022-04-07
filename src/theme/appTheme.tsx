@@ -15,4 +15,17 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
     },
 
+    button: {
+        backgroundColor: '#20232A',
+        borderRadius: 20,
+        padding: 10,
+        width: 200,
+        margin: 10,
+    },
+    textButton: {
+        color: '#FFFFFF',
+        alignSelf: 'center',
+        fontWeight: 'bold',
+    },
+
 });
