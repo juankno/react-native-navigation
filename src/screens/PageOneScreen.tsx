@@ -14,7 +14,14 @@ export const PageOneScreen = ({ navigation }: Props) => {
 
       <Button
         title="Ir a la página 2"
-        onPress={() => navigation.navigate('PageTwoScreen')} />
+        onPress={() => navigation.navigate('PageTwoScreen')}
+      />
+
+      <Button
+        title="Ir Persona"
+        onPress={() => navigation.navigate('PersonScreen')}
+      />
+
     </View>
   );
 };
