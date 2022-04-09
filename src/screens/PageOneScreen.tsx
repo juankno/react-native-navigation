@@ -8,44 +8,64 @@ interface Props extends DrawerScreenProps<any, any> { }
 export const PageOneScreen = ({ navigation }: Props) => {
 
   useEffect(() => {
+
     navigation.setOptions({
-      headerLeft: () => <Button title="Menú"
-        onPress={() => navigation.toggleDrawer()}
-      />,
+      headerLeft: () => (
+        <Button
+          title="Menú"
+          onPress={() => navigation.toggleDrawer()}
+        />
+      ),
     });
+
+
   }, []);
 
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Page 1 Screen</Text>
+    <View style={styles.globalMargin}>
+      <Text style={styles.title}>Página 1 Screen</Text>
 
       <TouchableOpacity
-        style={styles.button}
+        style={styles.bigButton}
         onPress={() => navigation.navigate('PageTwoScreen')}
       >
-        <Text style={styles.textButton}>Ir a la página 2</Text>
+        <Text style={styles.bigButtonText}>Ir a la página 2</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('PersonScreen', {
-          id: 1,
-          name: 'Pedro Corhal',
-        })}
-      >
-        <Text style={styles.textButton}>Pedro Corhal</Text>
-      </TouchableOpacity>
+      <Text style={{
+        marginVertical: 20,
+        fontSize: 20,
+      }}> Navegar con argumentos
+      </Text>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('PersonScreen', {
-          id: 2,
-          name: 'María Acevedo',
-        })}
-      >
-        <Text style={styles.textButton}>María Acevedo</Text>
-      </TouchableOpacity>
+      <View style={{
+        flexDirection: 'row',
+      }}>
+
+        <TouchableOpacity
+          style={styles.bigButton}
+          onPress={() => navigation.navigate('PersonScreen', {
+            id: 1,
+            name: 'Pedro Corhal',
+          })}
+        >
+          <Text style={styles.bigButtonText}>Pedro Corhal</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.bigButton}
+          onPress={() => navigation.navigate('PersonScreen', {
+            id: 2,
+            name: 'María Acevedo',
+          })}
+        >
+          <Text style={styles.bigButtonText}>María Acevedo</Text>
+        </TouchableOpacity>
+
+      </View>
+
+
 
     </View>
   );
