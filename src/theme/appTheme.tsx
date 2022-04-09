@@ -9,6 +9,11 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
 
+    globalMargin: {
+        marginHorizontal: 10,
+        marginVertical: 10,
+    },
+
     title: {
         fontSize: 30,
         marginBottom: 10,
