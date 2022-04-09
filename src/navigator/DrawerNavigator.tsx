@@ -2,14 +2,15 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { StackNavigator } from './StackNavigator';
 import { SettingsScreen } from '../screens/SettingsScreen';
-import { Dimensions } from 'react-native';
+import { useWindowDimensions } from 'react-native';
 
 const Drawer = createDrawerNavigator();
 
-const { width } = Dimensions.get('window');
-
-
 export const DrawerNavigator = () => {
+
+  const { width } = useWindowDimensions();
+
+
   return (
     <Drawer.Navigator
       screenOptions={{
