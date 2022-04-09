@@ -33,6 +33,8 @@ export const PageOneScreen = ({ navigation }: Props) => {
         <Text style={styles.bigButtonText}>Ir a la página 2</Text>
       </TouchableOpacity>
 
+      {/* Navegar con argumentos */}
+
       <Text style={{
         marginVertical: 20,
         fontSize: 20,

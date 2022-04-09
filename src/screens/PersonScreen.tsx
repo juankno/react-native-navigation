@@ -20,7 +20,7 @@ export const PersonScreen = ({ route, navigation }: Props) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Hola {params.name}</Text>
+            <Text style={styles.title}>{JSON.stringify(params, null, 2)}</Text>
         </View>
     );
 };
