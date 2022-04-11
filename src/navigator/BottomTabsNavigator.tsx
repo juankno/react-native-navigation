@@ -45,7 +45,7 @@ const TabsAndroid = () => {
                             iconName = 'T1';
                             break;
                         case 'TopTabsNavigator':
-                            iconName = 'T2';
+                            iconName = 'Tt';
                             break;
                         case 'StackNavigator':
                             iconName = 'St';
@@ -63,7 +63,7 @@ const TabsAndroid = () => {
             />
             <BottomTapAndroid.Screen
                 name="TopTabsNavigator" options={{
-                    title: 'Tab Two',
+                    title: 'Top Tabs',
                 }}
                 component={TopTabsNavigator}
             />
@@ -106,7 +106,7 @@ const TabsIos = () => {
                             iconName = 'T1';
                             break;
                         case 'TopTabsNavigator':
-                            iconName = 'T2';
+                            iconName = 'Tt';
                             break;
                         case 'StackNavigator':
                             iconName = 'St';
@@ -124,7 +124,7 @@ const TabsIos = () => {
             />
             <BottomTapIos.Screen
                 name="TopTabsNavigator" options={{
-                    title: 'Tab Two',
+                    title: 'Top Tabs',
                 }}
                 component={TopTabsNavigator}
             />
