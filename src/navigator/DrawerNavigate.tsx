@@ -1,9 +1,10 @@
 import React from 'react';
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView } from '@react-navigation/drawer';
-import { StackNavigator } from './StackNavigator';
+// import { StackNavigator } from './StackNavigator';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { useWindowDimensions, Text, View, Image, TouchableOpacity } from 'react-native';
 import { styles } from '../theme/appTheme';
+import { BottomTabsNavigator } from './BottomTabsNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,7 +21,7 @@ export const DrawerNavigate = () => {
       }}
       drawerContent={(props) => <DrawerContent {...props} />}
     >
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      <Drawer.Screen name="BottomTabsNavigator" component={BottomTabsNavigator} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
   );
@@ -44,9 +45,9 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
       <View style={styles.menuContainer}>
         <TouchableOpacity
           style={styles.menuButton}
-          onPress={() => navigation.navigate('StackNavigator')}
+          onPress={() => navigation.navigate('BottomTabsNavigator')}
         >
-          <Text style={styles.menuText}>Stack Screen</Text>
+          <Text style={styles.menuText}>Bottom Tabs Screen</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
