@@ -2,10 +2,10 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { TabOneScreen } from '../screens/TabOneScreen';
-import { TabTwoScreen } from '../screens/TabTwoScreen';
 import { StackNavigator } from './StackNavigator';
 import { colors } from '../theme/appTheme';
 import { Text, Platform } from 'react-native';
+import { TopTabsNavigator } from './TopTabsNavigator';
 
 
 export const BottomTabsNavigator = () => {
@@ -13,7 +13,6 @@ export const BottomTabsNavigator = () => {
     return Platform.OS === 'ios'
         ? <TabsIos />
         : <TabsAndroid />;
-
 };
 
 
@@ -45,7 +44,7 @@ const TabsAndroid = () => {
                         case 'TabOneScreen':
                             iconName = 'T1';
                             break;
-                        case 'TabTwoScreen':
+                        case 'TopTabsNavigator':
                             iconName = 'T2';
                             break;
                         case 'StackNavigator':
@@ -63,10 +62,10 @@ const TabsAndroid = () => {
                 component={TabOneScreen}
             />
             <BottomTapAndroid.Screen
-                name="TabTwoScreen" options={{
+                name="TopTabsNavigator" options={{
                     title: 'Tab Two',
                 }}
-                component={TabTwoScreen}
+                component={TopTabsNavigator}
             />
             <BottomTapAndroid.Screen
                 name="StackNavigator" options={{
@@ -106,7 +105,7 @@ const TabsIos = () => {
                         case 'TabOneScreen':
                             iconName = 'T1';
                             break;
-                        case 'TabTwoScreen':
+                        case 'TopTabsNavigator':
                             iconName = 'T2';
                             break;
                         case 'StackNavigator':
@@ -124,10 +123,10 @@ const TabsIos = () => {
                 component={TabOneScreen}
             />
             <BottomTapIos.Screen
-                name="TabTwoScreen" options={{
+                name="TopTabsNavigator" options={{
                     title: 'Tab Two',
                 }}
-                component={TabTwoScreen}
+                component={TopTabsNavigator}
             />
             <BottomTapIos.Screen
                 name="StackNavigator" options={{
