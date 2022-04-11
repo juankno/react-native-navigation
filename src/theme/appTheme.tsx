@@ -70,10 +70,14 @@ export const styles = StyleSheet.create({
 
     menuButton: {
         marginVertical: 10,
+        alignContent: 'space-between',
+        flexDirection: 'row',
     },
 
     menuText: {
         fontSize: 20,
+        alignSelf: 'center',
+        marginHorizontal: 10,
     },
 
 });

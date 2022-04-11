@@ -5,6 +5,7 @@ import { TabOneScreen } from '../screens/TabOneScreen';
 import { StackNavigator } from './StackNavigator';
 import { colors } from '../theme/appTheme';
 import { Text, Platform } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { TopTabsNavigator } from './TopTabsNavigator';
 
 
@@ -42,16 +43,18 @@ const TabsAndroid = () => {
                     let iconName: string = '';
                     switch (route.name) {
                         case 'TabOneScreen':
-                            iconName = 'T1';
+                            iconName = 'apps-outline';
                             break;
                         case 'TopTabsNavigator':
-                            iconName = 'Tt';
+                            iconName = 'bookmarks-outline';
                             break;
                         case 'StackNavigator':
-                            iconName = 'St';
+                            iconName = 'home-outline';
                             break;
                     }
-                    return <Text style={{ color }}>{iconName}</Text>;
+                    return <Text style={{ color }}>
+                        <Icon name={iconName} size={20} color="#ffff" />
+                    </Text>;
                 },
             })}
         >
@@ -103,16 +106,20 @@ const TabsIos = () => {
                     let iconName: string = '';
                     switch (route.name) {
                         case 'TabOneScreen':
-                            iconName = 'T1';
+                            iconName = 'apps-outline';
                             break;
                         case 'TopTabsNavigator':
-                            iconName = 'Tt';
+                            iconName = 'bookmarks-outline';
                             break;
                         case 'StackNavigator':
-                            iconName = 'St';
+                            iconName = 'home-outline';
                             break;
                     }
-                    return <Text style={{ color }}>{iconName}</Text>;
+                    return (
+                        <Text style={{ color }}>
+                            <Icon name={iconName} size={30} color="#900" />
+                        </Text>
+                    );
                 },
             })}
         >

@@ -5,6 +5,7 @@ import { SettingsScreen } from '../screens/SettingsScreen';
 import { useWindowDimensions, Text, View, Image, TouchableOpacity } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { BottomTabsNavigator } from './BottomTabsNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -44,17 +45,35 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
       {/* Menu options */}
       <View style={styles.menuContainer}>
         <TouchableOpacity
-          style={styles.menuButton}
+         
           onPress={() => navigation.navigate('BottomTabsNavigator')}
         >
-          <Text style={styles.menuText}>Bottom Tabs Screen</Text>
+          <View  style={styles.menuButton}>
+            <Text>
+              <Icon
+                name="home-outline"
+                size={20} color="#000"
+              />
+            </Text>
+            <Text style={styles.menuText}>
+              Bottom Tabs Screen
+            </Text>
+          </View>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={styles.menuButton}
+         
           onPress={() => navigation.navigate('SettingsScreen')}
         >
-          <Text style={styles.menuText}>Settings</Text>
+          <View  style={styles.menuButton}>
+            <Text>
+              <Icon
+                name="settings-outline"
+                size={20} color="#000"
+              />
+            </Text>
+            <Text style={styles.menuText}>Settings</Text>
+          </View>
         </TouchableOpacity>
       </View>
 

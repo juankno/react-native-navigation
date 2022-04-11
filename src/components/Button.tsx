@@ -2,15 +2,17 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Text } from 'react-native';
 import { styles } from '../theme/appTheme';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface Props {
     title: string;
     onPress: () => void;
+    iconName?: string;
     textColor?: string;
     fontColor?: string;
 }
 
-export const Button = ({ title, onPress, textColor = '#FFFFFF', fontColor = '#20232A' }: Props) => {
+export const Button = ({ title, onPress, iconName = '', textColor = '#FFFFFF', fontColor = '#20232A' }: Props) => {
     return (
         <TouchableOpacity
             style={{
@@ -22,7 +24,13 @@ export const Button = ({ title, onPress, textColor = '#FFFFFF', fontColor = '#20
             <Text style={{
                 ...styles.textButton,
                 color: textColor,
-            }}>{title}</Text>
+            }}>
+                <Icon
+                    name={iconName}
+                    size={20} color="#ffff"
+                />
+                {title}
+            </Text>
         </TouchableOpacity>
     );
 };
