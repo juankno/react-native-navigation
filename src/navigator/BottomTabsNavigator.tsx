@@ -4,6 +4,7 @@ import { TabOneScreen } from '../screens/TabOneScreen';
 import { TabTwoScreen } from '../screens/TabTwoScreen';
 import { StackNavigator } from './StackNavigator';
 import { colors } from '../theme/appTheme';
+import { Text } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,7 +14,7 @@ export const BottomTabsNavigator = () => {
             sceneContainerStyle={{
                 backgroundColor: 'white',
             }}
-            screenOptions={{
+            screenOptions={({ route }) => ({
                 tabBarActiveTintColor: colors.primary,
                 headerShown: false,
                 tabBarStyle: {
@@ -21,14 +22,33 @@ export const BottomTabsNavigator = () => {
                     borderTopWidth: 0,
                     elevation: 0,
                 },
-            }}
+                tabBarLabelStyle: {
+                    fontSize: 15,
+                },
+
+                tabBarIcon: ({ color, focused, size }) => {
+
+                    let iconName: string = '';
+                    switch (route.name) {
+                        case 'TabOneScreen':
+                            iconName = 'T1';
+                            break;
+                        case 'TabTwoScreen':
+                            iconName = 'T2';
+                            break;
+                        case 'StackNavigator':
+                            iconName = 'St';
+                            break;
+                    }
+                    return <Text style={{ color }}>{iconName}</Text>;
+                },
+            })}
         >
             <Tab.Screen
                 name="TabOneScreen"
                 options={{
                     title: 'Tab One',
                     tabBarLabel: 'Tab One',
-                    tabBarIcon: () => null,
                 }}
                 component={TabOneScreen}
             />
@@ -37,7 +57,6 @@ export const BottomTabsNavigator = () => {
                 options={{
                     title: 'Tab Two',
                     tabBarLabel: 'Tab Two',
-                    tabBarIcon: () => null,
                 }}
                 component={TabTwoScreen}
             />
@@ -46,7 +65,6 @@ export const BottomTabsNavigator = () => {
                 options={{
                     title: 'Stack',
                     tabBarLabel: 'Stack',
-                    tabBarIcon: () => null,
                 }}
                 component={StackNavigator}
             />
