@@ -13,7 +13,7 @@ export const PageOneScreen = ({ navigation }: Props) => {
     navigation.setOptions({
       headerLeft: () => (
         <TouchableOpacity
-        style={styles.globalMargin}
+          style={styles.globalMargin}
           onPress={() => navigation.toggleDrawer()}
         >
           <Text style={styles.textButton}>
@@ -35,6 +35,9 @@ export const PageOneScreen = ({ navigation }: Props) => {
         style={styles.bigButton}
         onPress={() => navigation.navigate('PageTwoScreen')}
       >
+        <Text style={styles.textButton}>
+          <Icon name="arrow-forward-circle-outline" size={20} color="#fff" />
+        </Text>
         <Text style={styles.bigButtonText}>Ir a la página 2</Text>
       </TouchableOpacity>
 
@@ -57,6 +60,9 @@ export const PageOneScreen = ({ navigation }: Props) => {
             name: 'Pedro Corhal',
           })}
         >
+          <Text style={styles.textButton}>
+            <Icon name="person-outline" size={20} color="#fff" />
+          </Text>
           <Text style={styles.bigButtonText}>Pedro Corhal</Text>
         </TouchableOpacity>
 
@@ -67,6 +73,9 @@ export const PageOneScreen = ({ navigation }: Props) => {
             name: 'María Acevedo',
           })}
         >
+          <Text style={styles.textButton}>
+            <Icon name="person-outline" size={20} color="#fff" />
+          </Text>
           <Text style={styles.bigButtonText}>María Acevedo</Text>
         </TouchableOpacity>
 
