@@ -50,7 +50,7 @@ export const TopTabsNavigator = () => {
 
           return (
             <Text style={{ color }}>
-              <Icon name={iconName} size={20} color="#000" />
+              <Icon name={iconName} size={25} color="#000" />
             </Text>
           );
         },

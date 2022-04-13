@@ -15,6 +15,11 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
 
+    bold: {
+        fontWeight: 'bold',
+        color: 'black',
+    },
+
     globalMargin: {
         marginHorizontal: 20,
     },
