@@ -48,7 +48,10 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 
           onPress={() => navigation.navigate('BottomTabsNavigator')}
         >
-          <View  style={styles.menuButton}>
+          <View style={{
+            ...styles.menuButton,
+            flexDirection: 'row',
+          }}>
             <Text>
               <Icon
                 name="home-outline"
@@ -65,7 +68,10 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
 
           onPress={() => navigation.navigate('SettingsScreen')}
         >
-          <View  style={styles.menuButton}>
+          <View style={{
+            ...styles.menuButton,
+            flexDirection: 'row',
+          }}>
             <Text>
               <Icon
                 name="settings-outline"

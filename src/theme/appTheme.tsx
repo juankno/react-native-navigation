@@ -75,8 +75,6 @@ export const styles = StyleSheet.create({
 
     menuButton: {
         marginVertical: 10,
-        alignContent: 'space-between',
-        flexDirection: 'row',
     },
 
     menuText: {
