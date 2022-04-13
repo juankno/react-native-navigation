@@ -17,7 +17,7 @@ export const PageOneScreen = ({ navigation }: Props) => {
           onPress={() => navigation.toggleDrawer()}
         >
           <Text style={styles.textButton}>
-            <Icon name="menu-outline" size={20} color="#000" />
+            <Icon name="menu-outline" size={30} color="#000" />
           </Text>
         </TouchableOpacity>
       ),

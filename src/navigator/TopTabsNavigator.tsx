@@ -19,6 +19,10 @@ export const TopTabsNavigator = () => {
       screenOptions={({ route }) => ({
         tabBarPressColor: colors.primary,
         tabBarShowIcon: true,
+        tabBarLabelStyle: {
+          fontSize: 12,
+          textTransform: 'capitalize',
+        },
         tabBarStyle: {
           paddingTop: top,
           borderTopColor: colors.primary,

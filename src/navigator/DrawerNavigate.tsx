@@ -45,14 +45,14 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
       {/* Menu options */}
       <View style={styles.menuContainer}>
         <TouchableOpacity
-         
+
           onPress={() => navigation.navigate('BottomTabsNavigator')}
         >
           <View  style={styles.menuButton}>
             <Text>
               <Icon
                 name="home-outline"
-                size={20} color="#000"
+                size={23} color="#000"
               />
             </Text>
             <Text style={styles.menuText}>
@@ -62,14 +62,14 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
         </TouchableOpacity>
 
         <TouchableOpacity
-         
+
           onPress={() => navigation.navigate('SettingsScreen')}
         >
           <View  style={styles.menuButton}>
             <Text>
               <Icon
                 name="settings-outline"
-                size={20} color="#000"
+                size={23} color="#000"
               />
             </Text>
             <Text style={styles.menuText}>Settings</Text>
