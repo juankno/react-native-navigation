@@ -70,7 +70,7 @@ export const styles = StyleSheet.create({
 
     menuContainer: {
         marginVertical: 30,
-        marginHorizontal: 40,
+        marginHorizontal: 30,
     },
 
     menuButton: {
