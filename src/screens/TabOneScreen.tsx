@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { View, Text } from 'react-native';
-import { styles, colors } from '../theme/appTheme';
+import { styles } from '../theme/appTheme';
 import { TouchableIcon } from '../components/TouchableIcon';
 
 export const TabOneScreen = () => {
